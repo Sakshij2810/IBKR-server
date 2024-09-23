@@ -107,4 +107,5 @@ async def place_order():
         return jsonify({'status': 'error', 'message': 'An unexpected error occurred'}), 500
 
 if __name__ == '__main__':
-    app.run(debug=True, port=4000)
+    port = int(os.getenv('PORT', 4000))  # Get the PORT environment variable
+    app.run(host='0.0.0.0', port=port, debug=True)  # Bind to 0.0.0.0
