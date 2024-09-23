@@ -3,3 +3,5 @@ ib-insync
 python-dotenv
 pyjwt
 Flask-Cors
+gunicorn
+
